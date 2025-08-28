@@ -1,6 +1,8 @@
 # ProgrammerSomData
 Programmer som data exercises
 
+# ASSIGNMENT 1
+
 ## Exercise 1.1
 
 1.  File Intro2.fs contains a definition of the expr expression language and
@@ -92,16 +94,19 @@ print it, as follows:
 
 Extend the expression language expr from Intcomp1.fs with
 multiple sequential let-bindings, such as this (in concrete syntax):
+
 <img width="513" height="40" alt="image" src="https://github.com/user-attachments/assets/f92a2e91-639b-452e-93a0-6c729c3c89f3" />
 
 To evaluate this, the right-hand side expression 5+7 must be evaluated and bound
 to x1, and then x1*2 must be evaluated and bound to x2, after which the let-body
 x1+x2 is evaluated.
 The new abstract syntax for expr might be
+
 <img width="754" height="144" alt="image" src="https://github.com/user-attachments/assets/ef9d83a1-d229-4875-b349-03f303e4a043" />
 
 so that the Let constructor takes a list of bindings, where a binding is a pair of a
 variable name and an expression. The example above would be represented as:
+
 <img width="835" height="44" alt="image" src="https://github.com/user-attachments/assets/88469aca-8049-46c5-b478-3ab9cdeb72e3" />
 
 Revise the eval interpreter from Intcomp1.fs to work for the expr language
