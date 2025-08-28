@@ -33,3 +33,36 @@ Note that various strange and non-standard interpretations of the conditional ex
 pression are possible. For instance, the interpreter might start by testing whether
 expressions e2 and e3 are syntactically identical, in which case there is no need to
 evaluate e1, only e2 (or e3). Although possible, this shortcut is rarely useful.
+
+## Ecercise 1.2 
+
+1. Declare an alternative datatype aexpr for a representation of arithmetic ex-
+pressions without let-bindings. The datatype should have constructors CstI,
+Var, Add, Mul, Sub, for constants, variables, addition, multiplication, and
+subtraction.
+Then x ∗ (y + 3) is represented as Mul(Var "x", Add(Var "y",
+CstI 3)), not as Prim("*", Var "x", Prim("+", Var "y",
+CstI 3)).
+
+2. Write the representation of the expressions v − (w + z) and 2 ∗ (v − (w + z))
+and x + y + z + v.
+
+3. Write an F# function fmt : aexpr -> string to format expressions
+as strings. For instance, it may format Sub(Var "x", CstI 34) as the
+string "(x - 34)". It has very much the same structure as an eval func-
+tion, but takes no environment argument (because the name of a variable is
+independent of its value).
+
+4. Write an F# function simplify : aexpr -> aexpr to perform expres-
+sion simplification. For instance, it should simplify (x + 0) to x, and simplify
+(1 + 0) to 1. The more ambitious student may want to simplify (1 + 0) ∗ (x + 0)
+to x. Hint: Pattern matching is your friend. Hint: Don’t forget the case where
+you cannot simplify anything.
+
+You might consider the following simplifications, plus any others you find
+useful and correct:
+<img width="199" height="301" alt="image" src="https://github.com/user-attachments/assets/9b354c92-960e-4c5e-ab66-ea35ca55ff15" />
+
+
+5. Write an F# function to perform symbolic differentiation of simple arithmetic
+expressions (such as aexpr) with respect to a single variable.
