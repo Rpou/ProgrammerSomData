@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yUV7bgs7U9s=",
+  "success": true,
+  "projectFilePath": "/home/rasmus/Desktop/Code/ITU/5.semester/progammerSomData/Exercises/Exercises.fsproj",
+  "expectedPackageFiles": [
+    "/home/rasmus/.nuget/packages/fsharp.core/9.0.300/fsharp.core.9.0.300.nupkg.sha512"
+  ],
+  "logs": []
+}
