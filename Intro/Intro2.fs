@@ -31,28 +31,32 @@ let e2 = Prim("+", CstI 3, Var "a");;
 
 let e3 = Prim("+", Prim("*", Var "b", CstI 9), Var "a");;
 
-let e4 = Prim("max", CstI 3, CstI 8);;
-
-let e5 = Prim("min", CstI 3, CstI 8);;
-
-let e6 = Prim("==", CstI 2, Var "a");;
-
 (* Evaluation within an environment *)
 
 let rec eval e (env : (string * int) list) : int =
     match e with
     | CstI i            -> i
     | Var x             -> lookup env x 
-    | Prim("+", e1, e2) -> eval e1 env + eval e2 env
-    | Prim("*", e1, e2) -> eval e1 env * eval e2 env
-    | Prim("-", e1, e2) -> eval e1 env - eval e2 env
-    | Prim("max", e1, e2) -> if eval e1 env > eval e2 env then eval e1 env else eval e2 env
-    | Prim("min", e1, e2) -> if eval e1 env < eval e2 env then eval e1 env else eval e2 env
-    | Prim("==", e1, e2) -> if eval e1 env = eval e2 env then 1 else 0
-    | Prim _            -> failwith "unknown primitive";;
-
+    | Prim(ope , e1, e2) ->
+        let i1 = eval e1 env
+        let i2 = eval e2 env
+        match ope with
+        | "+" -> i1 + i2
+        | "-" -> i1 - i2
+        | "*" -> i1 * i2
+        | "max" -> if i1 > i2 then i1 else i2
+        | "min" -> if i1 < i2 then i1 else i2
+        | "==" -> if i1 = i2 then 1 else 0
+        | _ -> failwith "unknown primitive";;
 
 let e1v  = eval e1 env;;
 let e2v1 = eval e2 env;;
 let e2v2 = eval e2 [("a", 314)];;
 let e3v  = eval e3 env;;
+
+// Tests
+let e4 = eval (Prim("max", CstI 3, CstI 8)) env;; // Test max
+
+let e5 = eval (Prim("min", CstI 3, CstI 8)) env;; // Test min
+
+let e6 = eval (Prim("==", CstI 2, Var "a")) env;; // Test equals
