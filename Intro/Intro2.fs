@@ -31,7 +31,6 @@ let e2 = Prim("+", CstI 3, Var "a");;
 
 let e3 = Prim("+", Prim("*", Var "b", CstI 9), Var "a");;
 
-
 (* Evaluation within an environment *)
 
 let rec eval e (env : (string * int) list) : int =
@@ -41,7 +40,11 @@ let rec eval e (env : (string * int) list) : int =
     | Prim("+", e1, e2) -> eval e1 env + eval e2 env
     | Prim("*", e1, e2) -> eval e1 env * eval e2 env
     | Prim("-", e1, e2) -> eval e1 env - eval e2 env
+    | Prim("max", e1, e2) -> if eval e1 env > eval e2 env then eval e1 env else eval e2 env
+    | Prim("min", e1, e2) -> if eval e1 env < eval e2 env then eval e1 env else eval e2 env
+    | Prim("==", e1, e2) -> if eval e1 env = eval e2 env then 1 else 0
     | Prim _            -> failwith "unknown primitive";;
+
 
 let e1v  = eval e1 env;;
 let e2v1 = eval e2 env;;
