@@ -61,8 +61,29 @@ you cannot simplify anything.
 
 You might consider the following simplifications, plus any others you find
 useful and correct:
+
 <img width="199" height="301" alt="image" src="https://github.com/user-attachments/assets/9b354c92-960e-4c5e-ab66-ea35ca55ff15" />
 
 
 5. Write an F# function to perform symbolic differentiation of simple arithmetic
 expressions (such as aexpr) with respect to a single variable.
+
+## Exercise 1.4 
+
+This chapter has shown how to represent abstract syntax in functional
+languages such as F# (using algebraic datatypes) and in object-oriented languages
+such as Java or C# (using a class hierarchy and composites).
+
+1. Use Java or C# classes and methods to do what we have done using the F#
+datatype aexpr in the preceding exercises. Design a class hierarchy to represent arithmetic expressions: it could have an abstract class Expr with subclasses CstI, Var, and Binop, where the latter is itself abstract and has
+concrete subclasses Add, Mul and Sub. All classes should implement the
+toString() method to format an expression as a String.
+The classes may be used to build an expression in abstract syntax, and then
+print it, as follows:
+
+<img width="546" height="70" alt="image" src="https://github.com/user-attachments/assets/cef507d4-fa12-4b9c-93b0-dfbb44f6ab66" />
+
+2. Create three more expressions in abstract syntax and print them.
+3. Extend your classes with facilities to evaluate the arithmetic expressions, that is, add a method int eval(env).
+4.  Add a method Expr simplify() that returns a new expression where algebraic simplifications have been performed, as in part (iv) of Exercise 1.2.
+
