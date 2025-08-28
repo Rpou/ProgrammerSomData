@@ -31,6 +31,12 @@ let e2 = Prim("+", CstI 3, Var "a");;
 
 let e3 = Prim("+", Prim("*", Var "b", CstI 9), Var "a");;
 
+let e4 = Prim("max", CstI 3, CstI 8);;
+
+let e5 = Prim("min", CstI 3, CstI 8);;
+
+let e6 = Prim("==", CstI 2, Var "a");;
+
 (* Evaluation within an environment *)
 
 let rec eval e (env : (string * int) list) : int =
