@@ -25,6 +25,12 @@ type aexpr =
     | Add of aexpr * aexpr
     | Mul of aexpr * aexpr
     | Sub of aexpr * aexpr;;
+    
+let e4 = Sub(Var "v", Add(Var "W", Var "Z"));;
+
+let e5 = Mul(Var "2", Sub(Var "v", Add(Var "W", Var "Z")));;
+
+let e6 = Add(Add(Var "x", Var "y"), Add(Var "z", Var "v"));;
 
 type expr = 
   | CstI of int
@@ -38,6 +44,7 @@ let e1 = CstI 17;;
 let e2 = Prim("+", CstI 3, Var "a");;
 
 let e3 = Prim("+", Prim("*", Var "b", CstI 9), Var "a");;
+
 
 (* Evaluation within an environment *)
 
