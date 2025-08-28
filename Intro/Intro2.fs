@@ -19,12 +19,19 @@ let cvalue = lookup env "c";;
 
 
 (* Object language expressions with variables *)
+type aexpr =
+    | CstI of int
+    | Var of string
+    | Add of aexpr * aexpr
+    | Mul of aexpr * aexpr
+    | Sub of aexpr * aexpr;;
 
 type expr = 
   | CstI of int
   | Var of string
   | Prim of string * expr * expr
   | If of expr * expr * expr;;
+  
 
 let e1 = CstI 17;;
 
