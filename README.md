@@ -87,3 +87,42 @@ print it, as follows:
 3. Extend your classes with facilities to evaluate the arithmetic expressions, that is, add a method int eval(env).
 4.  Add a method Expr simplify() that returns a new expression where algebraic simplifications have been performed, as in part (iv) of Exercise 1.2.
 
+
+## Exercise 2.1 
+
+Extend the expression language expr from Intcomp1.fs with
+multiple sequential let-bindings, such as this (in concrete syntax):
+<img width="513" height="40" alt="image" src="https://github.com/user-attachments/assets/f92a2e91-639b-452e-93a0-6c729c3c89f3" />
+
+To evaluate this, the right-hand side expression 5+7 must be evaluated and bound
+to x1, and then x1*2 must be evaluated and bound to x2, after which the let-body
+x1+x2 is evaluated.
+The new abstract syntax for expr might be
+<img width="754" height="144" alt="image" src="https://github.com/user-attachments/assets/ef9d83a1-d229-4875-b349-03f303e4a043" />
+
+so that the Let constructor takes a list of bindings, where a binding is a pair of a
+variable name and an expression. The example above would be represented as:
+<img width="835" height="44" alt="image" src="https://github.com/user-attachments/assets/88469aca-8049-46c5-b478-3ab9cdeb72e3" />
+
+Revise the eval interpreter from Intcomp1.fs to work for the expr language
+extended with multiple sequential let-bindings.
+
+
+## Exercise 2.2 
+
+Revise the function freevars : expr -> string list to
+work for the language as extended in Exercise 2.1. Note that the example expression
+in the beginning of Exercise 2.1 has no free variables, but let x1 = x1+7 in
+x1+8 end has the free variable x1, because the variable x1 is bound only in the
+body (x1+8), not in the right-hand side (x1+7), of its own binding. There are
+programming languages where a variable can be used in the right-hand side of its
+own binding, but ours is not such a language.
+
+
+## Exercise 2.3 
+
+Revise the expr-to-texpr compiler tcomp : expr -> texpr
+from Intcomp1.fs to work for the extended expr language. There is no need
+to modify the texpr language or the teval interpreter to accommodate multiple
+sequential let-bindings.
+
