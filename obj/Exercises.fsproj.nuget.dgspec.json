@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ITU\\5.semester\\ProgrammerSomData\\Exercises.fsproj": {}
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Exercises.fsproj": {}
   },
   "projects": {
-    "C:\\ITU\\5.semester\\ProgrammerSomData\\Exercises.fsproj": {
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Exercises.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ITU\\5.semester\\ProgrammerSomData\\Exercises.fsproj",
+        "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Exercises.fsproj",
         "projectName": "Exercises",
-        "projectPath": "C:\\ITU\\5.semester\\ProgrammerSomData\\Exercises.fsproj",
-        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "C:\\ITU\\5.semester\\ProgrammerSomData\\obj\\",
+        "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Exercises.fsproj",
+        "packagesPath": "/home/rasmus/.nuget/packages/",
+        "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/rasmus/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\9.0.205\\FSharp\\library-packs": {},
+          "/home/rasmus/.dotnet/sdk/9.0.303/FSharp/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,7 +34,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -43,7 +43,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[9.0.202, )",
+              "version": "[9.0.300, )",
               "generatePathProperty": true
             }
           },
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/rasmus/.dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

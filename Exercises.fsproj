@@ -8,6 +8,16 @@
     <ItemGroup>
         <Compile Include="Program.fs"/>
         <Compile Include="E1.fs" />
+        <Content Include="Intro\CstI.class" />
+        <Content Include="Intro\Prim.class" />
+        <Compile Include="Intro\Intro1.fs" />
+        <Content Include="Intro\README.TXT" />
+        <Content Include="Intro\Expr.class" />
+        <Compile Include="Intro\Intro2.fs" />
+        <Content Include="Intro\SimpleExpr.class" />
+        <Compile Include="Intro\Appendix.fs" />
+        <Content Include="Intro\Var.class" />
+        <Content Include="Intro\SimpleExpr.java" />
     </ItemGroup>
 
 </Project>
