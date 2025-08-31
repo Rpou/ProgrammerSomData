@@ -139,6 +139,37 @@ class Mul : AExpr
         return $"({e1.Fmt2(env)}{oper}{e2.Fmt2(env)})";
     }
     
+    public override AExpr simplify()
+    {
+        var evaluated1 = e1.simplify();
+        var evaluated2 = e2.simplify();
+        
+        if(evaluated1 is CstI && evaluated2 is CstI)
+        {
+            return new CstI(Int32.Parse(evaluated1.Fmt()) * Int32.Parse(evaluated2.Fmt()));  
+        } 
+        else if (evaluated1 is CstI && Int32.Parse(evaluated1.Fmt()) == 0)
+        {
+            return new CstI(0);
+        }
+        else if (evaluated2 is CstI && Int32.Parse(evaluated2.Fmt()) == 0)
+        {
+            return new CstI(0);
+        }
+        else if (evaluated1 is CstI && Int32.Parse(evaluated1.Fmt()) == 1)
+        {
+            return evaluated2;
+        }
+        else if (evaluated2 is CstI && Int32.Parse(evaluated2.Fmt()) == 1)
+        {
+            return evaluated1;
+        }
+        else
+        {
+            return new Mul(evaluated1, evaluated2);
+        }
+    }
+    
     
 }
 
@@ -178,7 +209,7 @@ class Sub : AExpr
         {
             if (e1.Fmt() == e2.Fmt())
             {
-                new CstI(0);
+                return new CstI(0);
             }
             else
             {
