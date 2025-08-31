@@ -85,8 +85,6 @@ let e18 = fmt (simplify (Sub(CstI 7, CstI 3)));
 let e19 = fmt (simplify (Sub(Var "w", Var "w")));
     
 
-    
-
 type expr = 
   | CstI of int
   | Var of string
