@@ -83,7 +83,6 @@ let e16 = fmt (simplify (Mul(CstI 1, Var "z")));
 let e17 = fmt (simplify (Mul(Var "z", CstI 0)));
 let e18 = fmt (simplify (Sub(CstI 7, CstI 3)));
 let e19 = fmt (simplify (Sub(Var "w", Var "w")));
-    
 
 type expr = 
   | CstI of int
