@@ -197,23 +197,26 @@ class Sub : AExpr
     
     public override AExpr simplify()
     {
-        if(e1 is CstI && e2 is CstI)
+        var evaluated1 = e1.simplify();
+        var evaluated2 = e2.simplify();
+        
+        if(evaluated1 is CstI && evaluated2 is CstI)
         {
-            return new CstI(Int32.Parse(e1.Fmt()) - Int32.Parse(e2.Fmt()));  
+            return new CstI(Int32.Parse(evaluated1.Fmt()) - Int32.Parse(evaluated2.Fmt()));  
         } 
-        else if (e2 is CstI && Int32.Parse(e2.Fmt()) == 0)
+        else if (evaluated2 is CstI && Int32.Parse(evaluated2.Fmt()) == 0)
         {
-            return e1;
+            return evaluated1;
         }
         else
         {
-            if (e1.Fmt() == e2.Fmt())
+            if (evaluated1.Fmt() == evaluated2.Fmt())
             {
                 return new CstI(0);
             }
             else
             {
-                return new Sub(e1, e2);
+                return new Sub(evaluated1, evaluated2);
             }
         }
     }
