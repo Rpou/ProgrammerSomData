@@ -21,6 +21,7 @@
         <Compile Include="Intro\Appendix.fs" />
         <Content Include="Intro\Var.class" />
         <Content Include="Intro\SimpleExpr.java" />
+        <Compile Include="Intro\SimpleExpr.cs" />
         <Content Include="README.md" />
     </ItemGroup>
 
