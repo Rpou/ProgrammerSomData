@@ -14,8 +14,11 @@ abstract class AExpr
 {
     public abstract string Fmt();
     public abstract string Fmt2(Dictionary<string, int> env);
-
-    public abstract AExpr simplify();
+    
+    public abstract int Eval(Dictionary<string, int> env);
+    
+    public abstract AExpr Simplify();
+    
 }
 
 // Constant integer
@@ -38,7 +41,12 @@ class CstI : AExpr
         return i.ToString();
     }
 
-    public override AExpr simplify()
+    public override int Eval(Dictionary<string, int> env)
+    {
+        return this.i;
+    }
+
+    public override AExpr Simplify()
     {
         return this;
     }
@@ -64,7 +72,17 @@ class Var : AExpr
         return env[name].ToString();
     }
     
-    public override AExpr simplify()
+    public int Lookup(Dictionary<string, int> env)
+    {
+        return env[this.name];
+    }
+    
+    public override int Eval(Dictionary<string, int> env)
+    {
+        return Lookup(env);
+    }
+    
+    public override AExpr Simplify()
     {
         return this;
     }
@@ -91,11 +109,19 @@ class Add : AExpr
     {
         return $"({e1.Fmt2(env)}{oper}{e2.Fmt2(env)})";
     }
-    
-    public override AExpr simplify()
+
+    public override int Eval(Dictionary<string, int> env)
     {
-        var evaluated1 = e1.simplify();
-        var evaluated2 = e2.simplify();
+        var evaluated1 = e1.Eval(env);
+        var evaluated2 = e2.Eval(env);
+        
+        return evaluated1 + evaluated2;
+    }
+
+    public override AExpr Simplify()
+    {
+        var evaluated1 = e1.Simplify();
+        var evaluated2 = e2.Simplify();
         
         if(evaluated1 is CstI && evaluated2 is CstI)
         {
@@ -138,10 +164,18 @@ class Mul : AExpr
         return $"({e1.Fmt2(env)}{oper}{e2.Fmt2(env)})";
     }
     
-    public override AExpr simplify()
+    public override int Eval(Dictionary<string, int> env)
     {
-        var evaluated1 = e1.simplify();
-        var evaluated2 = e2.simplify();
+        var evaluated1 = e1.Eval(env);
+        var evaluated2 = e2.Eval(env);
+        
+        return evaluated1 * evaluated2;
+    }
+    
+    public override AExpr Simplify()
+    {
+        var evaluated1 = e1.Simplify();
+        var evaluated2 = e2.Simplify();
         
         if(evaluated1 is CstI && evaluated2 is CstI)
         {
@@ -193,11 +227,19 @@ class Sub : AExpr
     {
         return $"({e1.Fmt2(env)}{oper}{e2.Fmt2(env)})";
     }
-    
-    public override AExpr simplify()
+
+    public override int Eval(Dictionary<string, int> env)
     {
-        var evaluated1 = e1.simplify();
-        var evaluated2 = e2.simplify();
+        var evaluated1 = e1.Eval(env);
+        var evaluated2 = e2.Eval(env);
+        
+        return evaluated1 - evaluated2;
+    }
+    
+    public override AExpr Simplify()
+    {
+        var evaluated1 = e1.Simplify();
+        var evaluated2 = e2.Simplify();
         
         if(evaluated1 is CstI && evaluated2 is CstI)
         {
@@ -230,6 +272,8 @@ class SimpleExpr
         AExpr e2 = new Add(new CstI(3), new Var("a"));
         AExpr e3 = new Add(new Mul(new Var("b"), new CstI(9)), new Var("a"));
         AExpr e4 = new Sub(new Var("a"), new Var("a"));
+        AExpr e5 = new Mul(new CstI(1), new Var("z"));
+        AExpr e6 = new Sub(e1, new CstI(10));
 
         var env0 = new Dictionary<string, int>
         {
@@ -239,9 +283,12 @@ class SimpleExpr
             { "b", 111 }
         };
         
-        Console.WriteLine(e1.simplify().Fmt());
-        Console.WriteLine(e2.simplify().Fmt());
-        Console.WriteLine(e4.simplify().Fmt());
+        Console.WriteLine(e1.Simplify().Fmt());
+        Console.WriteLine(e2.Simplify().Fmt());
+        Console.WriteLine(e3.Simplify().Fmt());
+        Console.WriteLine(e4.Simplify().Fmt());
+        Console.WriteLine(e5.Simplify().Fmt());
+        Console.WriteLine(e6.Simplify().Fmt());
         
     }
 }
