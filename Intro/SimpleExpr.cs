@@ -111,7 +111,6 @@ class Add : AExpr
         {
             return new Add(e1, e2);
         }
-        
     }
 }
 
@@ -136,6 +135,8 @@ class Mul : AExpr
     {
         return $"({e1.Fmt2(env)}{oper}{e2.Fmt2(env)})";
     }
+    
+    
 }
 
 class Sub : AExpr
@@ -158,6 +159,29 @@ class Sub : AExpr
     public override string Fmt2(Dictionary<string, int> env)
     {
         return $"({e1.Fmt2(env)}{oper}{e2.Fmt2(env)})";
+    }
+    
+    public override AExpr simplify()
+    {
+        if(e1 is CstI && e2 is CstI)
+        {
+            return new CstI(Int32.Parse(e1.Fmt()) - Int32.Parse(e2.Fmt()));  
+        } 
+        else if (e2 is CstI && Int32.Parse(e2.Fmt()) == 0)
+        {
+            return e1;
+        }
+        else
+        {
+            if (e1.Fmt() == e2.Fmt())
+            {
+                new CstI(0);
+            }
+            else
+            {
+                return new Sub(e1, e2);
+            }
+        }
     }
 }
 
