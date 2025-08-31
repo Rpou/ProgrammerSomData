@@ -101,7 +101,7 @@ class Add : AExpr
         if(evaluated1 is CstI && evaluated2 is CstI)
         {
             return new CstI(Int32.Parse(evaluated1.Fmt()) + Int32.Parse(evaluated2.Fmt()));  
-        } 
+        }
         else if (evaluated1 is CstI && Int32.Parse(evaluated1.Fmt()) == 0)
         {
             return evaluated2;

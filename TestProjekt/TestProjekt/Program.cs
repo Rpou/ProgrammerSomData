@@ -54,6 +54,11 @@ class Var : AExpr
         this.name = name;
     }
 
+    public int lookup(Dictionary<string, int> env,string name)
+    {
+        return env[name];
+    }
+
     public override string Fmt()
     {
         return name;
@@ -244,5 +249,7 @@ class SimpleExpr
         Console.WriteLine(e4.simplify().Fmt());
         
     }
+    
+    
 }
 
