@@ -75,9 +75,6 @@ let rec simplify ae : aexpr =
         | _ -> Mul (aex1,aex2)
     | _ -> ae
 
-let rec diff ae =
-    match ae 
-
 // tests for simplify
 let e13 = fmt (simplify (Sub(Var "v", Var "v")))
 let e14 = fmt (simplify (Add(Var "x", CstI 0)))
