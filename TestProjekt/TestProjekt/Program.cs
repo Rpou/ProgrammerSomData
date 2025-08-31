@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Exercises;
 using Microsoft.VisualBasic.CompilerServices;
 
 // Abstract expression class
@@ -230,6 +229,7 @@ class SimpleExpr
         AExpr e1 = new CstI(17);
         AExpr e2 = new Add(new CstI(3), new Var("a"));
         AExpr e3 = new Add(new Mul(new Var("b"), new CstI(9)), new Var("a"));
+        AExpr e4 = new Sub(new Var("a"), new Var("a"));
 
         var env0 = new Dictionary<string, int>
         {
@@ -239,7 +239,9 @@ class SimpleExpr
             { "b", 111 }
         };
         
-        Console.WriteLine("Env: " + string.Join(", ", env0));
+        Console.WriteLine(e1.simplify().Fmt());
+        Console.WriteLine(e2.simplify().Fmt());
+        Console.WriteLine(e4.simplify().Fmt());
         
     }
 }

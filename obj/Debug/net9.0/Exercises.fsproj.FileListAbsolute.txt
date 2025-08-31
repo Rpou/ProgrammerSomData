@@ -1,0 +1,5 @@
+C:\SchoolProjects\ProgrammerSomData\obj\Debug\net9.0\Exercises.fsproj.AssemblyReference.cache
+C:\SchoolProjects\ProgrammerSomData\obj\Debug\net9.0\Exercises.AssemblyInfoInputs.cache
+C:\SchoolProjects\ProgrammerSomData\obj\Debug\net9.0\Exercises.AssemblyInfo.fs
+C:\SchoolProjects\ProgrammerSomData\obj\Debug\net9.0\Exercises.fsproj.CoreCompileInputs.cache
+C:\SchoolProjects\ProgrammerSomData\obj\Debug\net9.0\Exercises.sourcelink.json

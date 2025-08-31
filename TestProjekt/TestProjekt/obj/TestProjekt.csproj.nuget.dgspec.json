@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SchoolProjects\\ProgrammerSomData\\Exercises.fsproj": {}
+    "C:\\SchoolProjects\\ProgrammerSomData\\TestProjekt\\TestProjekt\\TestProjekt.csproj": {}
   },
   "projects": {
-    "C:\\SchoolProjects\\ProgrammerSomData\\Exercises.fsproj": {
+    "C:\\SchoolProjects\\ProgrammerSomData\\TestProjekt\\TestProjekt\\TestProjekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SchoolProjects\\ProgrammerSomData\\Exercises.fsproj",
-        "projectName": "Exercises",
-        "projectPath": "C:\\SchoolProjects\\ProgrammerSomData\\Exercises.fsproj",
+        "projectUniqueName": "C:\\SchoolProjects\\ProgrammerSomData\\TestProjekt\\TestProjekt\\TestProjekt.csproj",
+        "projectName": "TestProjekt",
+        "projectPath": "C:\\SchoolProjects\\ProgrammerSomData\\TestProjekt\\TestProjekt\\TestProjekt.csproj",
         "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "C:\\SchoolProjects\\ProgrammerSomData\\obj\\",
+        "outputPath": "C:\\SchoolProjects\\ProgrammerSomData\\TestProjekt\\TestProjekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,7 +20,6 @@
           "net9.0"
         ],
         "sources": {
-          "C:\\Users\\ander\\.dotnet\\sdk\\9.0.200\\FSharp\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -28,6 +27,11 @@
             "targetAlias": "net9.0",
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
@@ -39,14 +43,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "FSharp.Core": {
-              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
-              "target": "Package",
-              "version": "[9.0.201, )",
-              "generatePathProperty": true
-            }
-          },
           "imports": [
             "net461",
             "net462",

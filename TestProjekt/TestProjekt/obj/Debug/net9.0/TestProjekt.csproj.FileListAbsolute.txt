@@ -1,0 +1,15 @@
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\bin\Debug\net9.0\TestProjekt.exe
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\bin\Debug\net9.0\TestProjekt.deps.json
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\bin\Debug\net9.0\TestProjekt.runtimeconfig.json
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\bin\Debug\net9.0\TestProjekt.dll
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\bin\Debug\net9.0\TestProjekt.pdb
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.AssemblyInfoInputs.cache
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.AssemblyInfo.cs
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.csproj.CoreCompileInputs.cache
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.sourcelink.json
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.dll
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\refint\TestProjekt.dll
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.pdb
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\TestProjekt.genruntimeconfig.cache
+C:\SchoolProjects\ProgrammerSomData\TestProjekt\TestProjekt\obj\Debug\net9.0\ref\TestProjekt.dll
