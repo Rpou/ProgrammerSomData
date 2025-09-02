@@ -215,8 +215,16 @@ let rec freevars e : string list =
     match e with
     | CstI i -> []
     | Var x  -> [x]
-    | Let(x, erhs, ebody) -> 
-          union (freevars erhs, minus (freevars ebody, [x]))
+    | Let(list, expr) ->
+          let rec helper list accF accB =
+              match list with
+              | [] -> (accF, accB)
+              | (name,value) :: xs ->
+                  helper xs (union (minus (freevars value, accB), accF)) (name :: accB)
+        
+          let (free, bound) = helper list [] []
+       
+          union (free, minus (freevars expr, bound))
     | Prim(ope, e1, e2) -> union (freevars e1, freevars e2);;
 
 (* Alternative definition of closed *)
