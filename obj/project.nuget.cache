@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "of8aU6+dXoI=",
+  "dgSpecHash": "1VaYWIoI0xo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ralle\\Desktop\\code\\itu\\5.Semester\\ProgrammerSomData\\Exercises.fsproj",
+  "projectFilePath": "C:\\ITU\\5.semester\\ProgrammerSomData\\Exercises.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ralle\\.nuget\\packages\\fsharp.core\\9.0.201\\fsharp.core.9.0.201.nupkg.sha512"
+    "C:\\Users\\ander\\.nuget\\packages\\fsharp.core\\9.0.202\\fsharp.core.9.0.202.nupkg.sha512"
   ],
   "logs": []
 }
