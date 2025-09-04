@@ -1,7 +1,7 @@
 # Exercise 3.2
 
 ## Regex
-(b*(ab|b)*a?|a)
+`(b*(ab|b)*a?|a)`
 
 ## NFA
 This is our NFA
