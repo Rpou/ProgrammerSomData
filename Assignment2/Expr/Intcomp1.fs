@@ -399,6 +399,7 @@ let intsToFile (inss : int list) (fname : string) =
     let text = String.concat " " (List.map string inss)
     System.IO.File.WriteAllText(fname, text);;
     
+// takes each sinstr and gives it an int.
 let rec assemble (lst: sinstr list) : int list =
     match lst with
     | [] -> []
@@ -412,8 +413,8 @@ let rec assemble (lst: sinstr list) : int list =
         | SPop      -> 5 :: (assemble xs)
         | SSwap     -> 6 :: (assemble xs)
         
-
-
-intsToFile (assemble s5) ("e5file")
+// compiles a sinstr list and makes it into byte list.        
+let compiler e =
+    scomp e [] |> assemble
 
 (* -----------------------------------------------------------------  *)
