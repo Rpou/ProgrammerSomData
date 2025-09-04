@@ -163,3 +163,12 @@ Reading numbers from the text file may be done using the StringTokenizer class o
 StreamTokenizer class; see e.g. Java Precisely [4, Example 145].
 It is essential that the compiler (in F#) and the interpreter (in Java) agree on the
 intermediate language: what integer represents what instruction.
+
+## Exercise 3.2
+
+Write a regular expression that recognizes all sequences consisting of a and b
+where two a’s are always separated by at least one b. For instance, these four strings
+are legal: b, a, ba, ababbbaba; but these two strings are illegal: aa, babaa.
+Construct the corresponding NFA. Try to find a DFA corresponding to the NFA.
+
+
