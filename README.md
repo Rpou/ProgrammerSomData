@@ -131,3 +131,35 @@ from Intcomp1.fs to work for the extended expr language. There is no need
 to modify the texpr language or the teval interpreter to accommodate multiple
 sequential let-bindings.
 
+# Assignment 2
+
+## Exercise 2.4
+
+Write a bytecode assembler (in F#) that translates a list of byte-
+code instructions for the simple stack machine in Intcomp1.fs into a list of
+integers. The integers should be the corresponding bytecodes for the interpreter
+in Machine.java. Thus you should write a function: 
+
+assemble : sinstr list -> int list.
+
+Use this function together with scomp from Intcomp1.fs to make a compiler
+from the original expressions language expr to a list of bytecodes int list.
+You may test the output of your compiler by typing in the numbers as an int
+array in the Machine.java interpreter. (Or you may solve Exercise 2.5 below to
+avoid this manual work).
+
+## Exercise 2.5
+
+Modify the compiler from Exercise 2.4 to write the lists of integers to
+a file. An F# list inss of integers may be output to the file called fname using this
+function (found in Intcomp1.fs):
+
+<img width="691" height="77" alt="image" src="https://github.com/user-attachments/assets/91ac68dc-405c-4562-a063-c7c4939aea1c" />
+
+Then modify the stack machine interpreter in Machine.java to read the sequence
+of integers from a text file, and execute it as a stack machine program. The name
+of the text file may be given as a command-line parameter to the Java program.
+Reading numbers from the text file may be done using the StringTokenizer class or
+StreamTokenizer class; see e.g. Java Precisely [4, Example 145].
+It is essential that the compiler (in F#) and the interpreter (in Java) agree on the
+intermediate language: what integer represents what instruction.
