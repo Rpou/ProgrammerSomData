@@ -84,6 +84,15 @@ let e17 = fmt (simplify (Mul(Var "z", CstI 0)));
 let e18 = fmt (simplify (Sub(CstI 7, CstI 3)));
 let e19 = fmt (simplify (Sub(Var "w", Var "w")));
 
+// d/dx of an aexpr
+let rec diff (v:string) (e:aexpr) : aexpr =
+    match e with
+    | CstI _        -> CstI 0
+    | Var x         -> if x = v then CstI 1 else CstI 0
+    | Add(e1,e2)    -> Add(diff v e1, diff v e2)
+    | Sub(e1,e2)    -> Sub(diff v e1, diff v e2)
+    | Mul(e1,e2)    -> Add(Mul(diff v e1, e2), Mul(e1, diff v e2))
+
 type expr = 
   | CstI of int
   | Var of string
