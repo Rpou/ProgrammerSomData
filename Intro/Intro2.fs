@@ -32,6 +32,7 @@ let e5 = Mul(Var "2", Sub(Var "v", Add(Var "W", Var "Z")));;
 
 let e6 = Add(Add(Var "x", Var "y"), Add(Var "z", Var "v"));;
 
+// Modified format function
 let rec fmt e : string =
     match e with
     | CstI i -> string i 
