@@ -8,7 +8,6 @@
     <ItemGroup>
         <Compile Include="Intcomp\Intcomp1.fs" />
         <Compile Include="Program.fs"/>
-        <Compile Include="E1.fs" />
         <Content Include="Intcomp\Machine.class" />
         <Content Include="Intcomp\Machine.java" />
         <Content Include="Intro\CstI.class" />

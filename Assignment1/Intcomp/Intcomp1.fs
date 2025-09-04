@@ -252,6 +252,70 @@ let rec getindex vs x =
     | y::yr -> if x=y then 0 else 1 + getindex yr x;;
 
 (* Compiling from expr to texpr *)
+type aexpr =
+    | CstI of int
+    | Var of string
+    | Add of aexpr * aexpr
+    | Mul of aexpr * aexpr
+    | Sub of aexpr * aexpr;;
+    
+let e4 = Sub(Var "v", Add(Var "W", Var "Z"));;
+
+let e5 = Mul(Var "2", Sub(Var "v", Add(Var "W", Var "Z")));;
+
+let e6 = Add(Add(Var "x", Var "y"), Add(Var "z", Var "v"));;
+
+let rec fmt e : string =
+    match e with
+    | CstI i -> string i 
+    | Var x -> x
+    | Add(e1, e2) -> "(" + fmt e1 + " + " + fmt e2 + ")"
+    | Sub(e1, e2) -> "(" + fmt e1 + " - " + fmt e2 + ")"
+    | Mul(e1, e2) -> "(" + fmt e1 + " * " + fmt e2 + ")"
+    
+let e12 =  fmt e4
+
+// added "let aex1 = simplify e1" to cover cases with nested Add(Add...) 
+let rec simplify ae : aexpr =
+    match ae with
+    | Add (e1,e2) ->
+        let aex1 = simplify e1
+        let aex2 = simplify e2
+        //  if both const, then add. if one is 0, then return the other var.
+        match aex1, aex2 with
+        | CstI i1, CstI i2 -> CstI (i1 + i2)
+        | CstI 0, i2 -> i2
+        | i1, CstI 0 -> i1
+        | _ -> Add (aex1,aex2)
+    | Sub (e1, e2) ->
+        let aex1 = simplify e1
+        let aex2 = simplify e2
+        // if both const, then minus. if right is 0 then return first var. 
+        match aex1, aex2 with
+        | CstI i1, CstI i2 -> CstI (i1 - i2)
+        | i1, CstI 0 -> i1
+        | i1, i2 -> if i1 = i2 then CstI 0 else Sub (aex1,aex2)
+    | Mul (e1, e2) ->
+        let aex1 = simplify e1
+        let aex2 = simplify e2
+        // if both const then mul. if one side is 1 then return other var. if one side is 0 then 0.
+        match aex1, aex2 with
+        | CstI i1, CstI i2 -> CstI (i1 * i2)
+        | CstI 1, i2 -> i2
+        | i1, CstI 1 -> i1
+        | CstI 0, _ -> CstI 0
+        | _, CstI 0 -> CstI 0
+        | _ -> Mul (aex1,aex2)
+    | _ -> ae
+
+// tests for simplify
+let e13 = fmt (simplify (Sub(Var "v", Var "v")))
+let e14 = fmt (simplify (Add(Var "x", CstI 0)))
+let e15 = fmt (simplify (Add(CstI 0, Var "y")));
+let e16 = fmt (simplify (Mul(CstI 1, Var "z")));
+let e17 = fmt (simplify (Mul(Var "z", CstI 0)));
+let e18 = fmt (simplify (Sub(CstI 7, CstI 3)));
+let e19 = fmt (simplify (Sub(Var "w", Var "w")));
 
 let rec tcomp (e : expr) (cenv : string list) : texpr =
     match e with
