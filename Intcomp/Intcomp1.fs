@@ -258,6 +258,10 @@ let rec tcomp (e : expr) (cenv : string list) : texpr =
     | CstI i -> TCstI i
     | Var x  -> TVar (getindex cenv x)
     | Let(lst, ebody) ->
+        // added helper to go through the list.
+        // It goes through all expr and adds the name to the new env
+        // then when there is no more things in the lst, it makes the final env
+        // that contains every name from the lst
         let rec helper lst accEnv =
             match lst with
             | [] -> tcomp ebody accEnv
