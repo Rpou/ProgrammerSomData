@@ -395,7 +395,7 @@ let s5 = scomp e5 [];;
 
 (* Output the integers in list inss to the text file called fname: *)
 
-let intsToFile (inss : int list) (fname : string) = 
+let intsToFile (fname : string) (inss : int list)= 
     let text = String.concat " " (List.map string inss)
     System.IO.File.WriteAllText(fname, text);;
     
@@ -415,6 +415,6 @@ let rec assemble (lst: sinstr list) : int list =
         
 // compiles a sinstr list and makes it into byte list.        
 let compiler e =
-    scomp e [] |> assemble
+    scomp e [] |> assemble |> intsToFile "bytecode"
 
 (* -----------------------------------------------------------------  *)
