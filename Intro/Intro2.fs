@@ -84,14 +84,21 @@ let e17 = fmt (simplify (Mul(Var "z", CstI 0)));
 let e18 = fmt (simplify (Sub(CstI 7, CstI 3)));
 let e19 = fmt (simplify (Sub(Var "w", Var "w")));
 
-// d/dx of an aexpr
-let rec diff (v:string) (e:aexpr) : aexpr =
+// symbolic differentiation.
+// If the var is the same as the variable, it is 1
+// else it is a constant and is 0.
+let rec diff (variable:string) (e:aexpr) : aexpr =
     match e with
     | CstI _        -> CstI 0
-    | Var x         -> if x = v then CstI 1 else CstI 0
-    | Add(e1,e2)    -> Add(diff v e1, diff v e2)
-    | Sub(e1,e2)    -> Sub(diff v e1, diff v e2)
-    | Mul(e1,e2)    -> Add(Mul(diff v e1, e2), Mul(e1, diff v e2))
+    | Var x         -> if x = variable then CstI 1 else CstI 0
+    | Add(e1,e2)    -> Add(diff variable e1, diff variable e2)
+    | Sub(e1,e2)    -> Sub(diff variable e1, diff variable e2)
+    | Mul(e1,e2)    -> Add(Mul(diff variable e1, e2), Mul(e1, diff variable e2))
+    
+let e20 = Add(Mul(Var "x", Var "y"), Var "y")   // x*y + y
+
+let e21 = diff "x" e20 |> simplify |> fmt
+let e22 = diff "y" e20 |> simplify |> fmt
 
 type expr = 
   | CstI of int
