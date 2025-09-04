@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IWeta1Nmo64=",
+  "success": true,
+  "projectFilePath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment2/Expr/Exercises.fsproj",
+  "expectedPackageFiles": [
+    "/home/rasmus/.nuget/packages/fsharp.core/9.0.300/fsharp.core.9.0.300.nupkg.sha512"
+  ],
+  "logs": []
+}
