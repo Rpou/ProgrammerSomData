@@ -1,0 +1,9 @@
+#load "Absyn.fs";;
+#load "ExprLex.fs";;
+#load "ExprPar.fs";;
+#load "Parse.fs";;
+
+open Absyn;;
+open ExprLex;;
+open ExprPar;;
+open Parse;;
