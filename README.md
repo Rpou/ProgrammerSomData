@@ -1,5 +1,5 @@
 # ProgrammerSomData
-Programmer som data exercises
+Programmer som data exercises, link til hans github: https://github.itu.dk/nh/ProgramsAsDataCodeE2025
 
 # ASSIGNMENT 1
 
@@ -170,5 +170,57 @@ Write a regular expression that recognizes all sequences consisting of a and b
 where two a’s are always separated by at least one b. For instance, these four strings
 are legal: b, a, ba, ababbbaba; but these two strings are illegal: aa, babaa.
 Construct the corresponding NFA. Try to find a DFA corresponding to the NFA.
+
+# ASSIGNMENT 3
+
+## Exercise 3.3
+
+write out the rightmost derivation of the string below from the expression grammar at the end of Sect. 3.6.6, corresponding to ExprPar.fsy. Take
+note of the sequence of grammar rules (A–I) used. 
+
+<img width="417" height="36" alt="image" src="https://github.com/user-attachments/assets/960ab19c-9ac6-4bc8-b3a2-b28e15605b8f" />
+
+## Excersize 3.4
+
+Draw the above derivation as a tree.
+
+## Excersize 3.5
+
+Get expr.zip from the book homepage and unpack it. Using a command prompt, generate (1) the lexer and (2) the parser for expressions by running
+fslex and fsyacc; then (3) load the expression abstract syntax, the lexer and
+parser modules, and the expression interpreter and compilers, into an interactive F#
+session (fsi):
+
+<img width="741" height="105" alt="image" src="https://github.com/user-attachments/assets/4a12a3cb-9c18-4851-a0a2-6d833c460f6f" />
+
+Now try the parser on several example expressions, both well-formed and ill-formed
+ones, such as these, and some of your own invention:
+
+<img width="606" height="252" alt="image" src="https://github.com/user-attachments/assets/d9ef7c91-88fa-4d35-8934-e30495d18af0" />
+<img width="750" height="71" alt="image" src="https://github.com/user-attachments/assets/8b2c2692-baa1-4a41-8a17-20f751b3aac3" />
+
+## Excersize 3.6
+
+Use the expression parser from Parse.fs and the compiler scomp
+(from expressions to stack machine instructions) and the associated datatypes from
+Expr.fs, to define a function compString : string -> sinstr list
+that parses a string as an expression and compiles it to stack machine code.
+
+## Excersize 3.7
+
+Extend the expression language abstract syntax and the lexer and
+parser specifications with conditional expressions. The abstract syntax should be
+If(e1, e2, e3), so modify file Absyn.fs as well as ExprLex.fsl and
+file ExprPar.fsy. The concrete syntax may be the keyword-laden F#/ML-style:
+
+<img width="768" height="177" alt="image" src="https://github.com/user-attachments/assets/23d61b8a-acc5-4629-a4b8-29a7b7d20024" />
+
+
+
+
+
+
+
+
 
 
