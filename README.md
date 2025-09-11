@@ -1,5 +1,5 @@
 # ProgrammerSomData
-Programmer som data exercises
+Programmer som data exercises, link til hans github: https://github.itu.dk/nh/ProgramsAsDataCodeE2025
 
 # ASSIGNMENT 1
 
