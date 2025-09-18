@@ -96,20 +96,7 @@ let ex8 = fromString
                              end
               end"
 
-let ex8 = fromString
-            @"let pow = 8
-                in let ge2 x = (x = 11)
-                  in let ge3 y = (y = 0)
-                      in let numOf num = if ge2(num) then 1 else num * numOf (num+1)
-                         in let sum n =  if ge3(n) then 0 else numOf n + sum (n-1) 
-                             in sum 10 end
-                         end end
-                             end
-              end"
-
 let ex9 = fromString
-            @"let startPow = 8
-                in let ge2 x = (x = 0)
-                    in let currentNum x = x
-                        in let power pow = if ge2(num) then 1 else num * power (pow-1)
-                        
+                @"let ge2 x = (x = 11)
+                    in let sumPow n = if ge2(n) then 0 else n * n * n * n * n * n * n * n + sumPow(n+1)
+                        in sumPow 1 end end"
