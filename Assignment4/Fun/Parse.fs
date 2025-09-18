@@ -36,14 +36,6 @@ let fromFile (filename : string) =
 let e1 = fromString "5+7"
 let e2 = fromString "let f x = x + 7 in f 2 end"
 
-let sum n =
-    let rec helper x acc = 
-      match x with
-      | 0 -> acc
-      | _ -> sum (x-1) (acc+x)
-    helper n 0
-let e3 = sum 1000
-
 (* Examples in concrete syntax *)
 
 let ex1 = fromString 
@@ -78,3 +70,46 @@ let ex5 = fromString
                  in fib 25 
                  end
               end"
+let ex6 = fromString
+            @"let ge2 x = (x = 0)
+              in let sum n = if ge2(n) then n else n + sum (n-1)
+                 in sum 1000
+                 end
+              end"
+
+let ex7 = fromString
+            @"let num = 3
+                in let ge2 x = (x = 0)
+                  in let powerOf pow = if ge2(pow) then 1 else num * powerOf (pow-1) 
+                     in powerOf 8 end
+                     end
+              end"
+
+let ex8 = fromString
+            @"let num = 3
+                in let ge2 x = (x = 12)
+                  in let ge3 y = (y = 0)
+                      in let powerOf pow = if ge2(pow) then 1 else num * powerOf (pow+1)
+                         in let sum n =  if ge3(n) then 0 else powerOf n + sum (n-1) 
+                             in sum 12 end
+                         end end
+                             end
+              end"
+
+let ex8 = fromString
+            @"let pow = 8
+                in let ge2 x = (x = 11)
+                  in let ge3 y = (y = 0)
+                      in let numOf num = if ge2(num) then 1 else num * numOf (num+1)
+                         in let sum n =  if ge3(n) then 0 else numOf n + sum (n-1) 
+                             in sum 10 end
+                         end end
+                             end
+              end"
+
+let ex9 = fromString
+            @"let startPow = 8
+                in let ge2 x = (x = 0)
+                    in let currentNum x = x
+                        in let power pow = if ge2(num) then 1 else num * power (pow-1)
+                        
