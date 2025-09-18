@@ -24,7 +24,7 @@ let rec lookup env x =
 
 type value = 
   | Int of int
-  | Closure of string * string * expr * value env       (* (f, x, fBody, fDeclEnv) *)
+  | Closure of string * string list * expr * value env       (* (f, x, fBody, fDeclEnv) *)
 
 let rec eval (e : expr) (env : value env) : int =
     match e with 
@@ -53,27 +53,36 @@ let rec eval (e : expr) (env : value env) : int =
       if b<>0 then eval e2 env
       else eval e3 env
     | Letfun(f, xlist, fBody, letBody) -> 
-      let rec helper lst accEnv = 
+      (*let rec helper lst accEnv = 
         match lst with
         | [] -> accEnv
-        | x :: xs -> (f, Closure(f, x, fBody, accEnv)) :: accEnv 
+        | x :: xs -> (f, Closure(f, x, fBody, accEnv)) :: accEnv *)
 
-      let bodyEnv = helper xlist env
+      let bodyEnv = (f, Closure(f, xlist, fBody, env)) :: env
       eval letBody bodyEnv
     | Call(Var f, eArglist) -> 
       let fClosure = lookup env f
-        match fClosure with
-        | Closure (f, x, fBody, fDeclEnv) ->
-          let rec helper lst accEnv = 
-            match lst with 
-            | [] -> accEnv
-            | x :: xs ->
+      match fClosure with
+        | Closure (f, xlist, fBody, fDeclEnv) ->
+          let rec helper arglist xlst accEnv = 
+            match arglist, xlst with 
+            | [],[] -> accEnv
+            | x :: xs, y :: ys ->
                 let xVal = Int(eval x env)
-                helper xs ((x, xVal) :: (f, fClosure) :: fDeclEnv :: accEnv) 
+                helper xs ys ((y, xVal) :: (f, fClosure) :: fDeclEnv)
+            | _ -> failwith "you did NOT cook"
 
-          let finalBody = helper eArglist fDeclEnv
-          eval fBody fBodyEnv
-      | _ -> failwith "eval Call: not a function"
+          let finalBody = helper eArglist xlist env
+          eval fBody finalBody
+        | _ -> failwith "eval Call: not a function"
+    (*| Call(Var f, eArg) -> 
+      let fClosure = lookup env f
+      match fClosure with
+      | Closure (f, x, fBody, fDeclEnv) ->
+        let xVal = Int(eval eArg env)
+        let fBodyEnv = (x, xVal) :: (f, fClosure) :: fDeclEnv
+        eval fBody fBodyEnv
+      | _ -> failwith "eval Call: not a function"*)
     | Call _ -> failwith "eval Call: not first-order function"
 
 (* Evaluate in empty environment: program must have no free variables: *)
@@ -82,7 +91,7 @@ let run e = eval e [];;
 
 (* Examples in abstract syntax *)
 
-let ex1 = Letfun("f1", "x", Prim("+", Var "x", CstI 1), 
+(*let ex1 = Letfun("f1", "x", Prim("+", Var "x", CstI 1), 
                  Call(Var "f1", CstI 12));;
 
 (* Example: factorial *)
@@ -123,5 +132,5 @@ let ex5 =
                      Prim("+",
                           Call(Var "fib", Prim("-", Var "n", CstI 1)),
                           Call(Var "fib", Prim("-", Var "n", CstI 2))),
-                     CstI 1), Call(Var "fib", CstI 25)));;
+                     CstI 1), Call(Var "fib", CstI 25)));;*)
                      
