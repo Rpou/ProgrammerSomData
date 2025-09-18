@@ -12,4 +12,5 @@ This is our NFA
 ## DFA
 This is our DFA
 
-<img width="651" height="441" alt="image" src="https://github.com/user-attachments/assets/9c38fc07-9856-420f-9dc9-a93c477795ed" />
+<img width="625" height="421" alt="image" src="https://github.com/user-attachments/assets/90b0e5e0-e4ab-4971-848a-47f5182439bd" />
+
