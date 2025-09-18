@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TaK3/nu+y9Yqvxj02S5Dvqqfy8gsCxkBoGREZf1wtzuKXotc5T7vtNV8E6oBm2dAqsrrIrAPSK/wQiIqkd8H9g==",
+  "success": true,
+  "projectFilePath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment2/HelloLex/hello3.fsproj",
+  "expectedPackageFiles": [
+    "/home/rasmus/.nuget/packages/fsharp.core/8.0.102/fsharp.core.8.0.102.nupkg.sha512"
+  ],
+  "logs": []
+}
