@@ -171,6 +171,29 @@ where two a’s are always separated by at least one b. For instance, these four
 are legal: b, a, ba, ababbbaba; but these two strings are illegal: aa, babaa.
 Construct the corresponding NFA. Try to find a DFA corresponding to the NFA.
 
+## Hello Lex
+
+## Q1
+
+Regular expression: [0-9] = 0,1,2,3,4,5,6,7,8,9
+
+## Q2
+
+Files generated: hello.fs and hello.fsi is made after generating the lexer.
+
+How many states: 3
+
+## Q3
+
+
+
+## Q4
+
+## Q5
+
+## Q6
+
+
 # ASSIGNMENT 3
 
 ## Exercise 3.3
