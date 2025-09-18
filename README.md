@@ -191,10 +191,21 @@ How many states: 3
 
 ## Q4
 
+<img width="262" height="109" alt="image" src="https://github.com/user-attachments/assets/c03d3bad-f262-4165-a46a-534a1ee99f1b" />
+
+
 ## Q5
+
+<img width="350" height="111" alt="image" src="https://github.com/user-attachments/assets/f69b3529-8378-4622-8e4b-0860f5d4f9bd" />
+
 
 ## Q6
 
+It recognizes 34, because the "." is optional.
+
+It recognizes 34.24, because it can understand '.'.
+
+It does not recognize 34,24, because it can't understand ','. It recognizes 34 only.
 
 # ASSIGNMENT 3
 
