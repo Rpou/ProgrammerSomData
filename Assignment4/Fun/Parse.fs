@@ -32,7 +32,7 @@ let fromFile (filename : string) =
                   (exn.Message) filename (pos.Line+1) pos.Column
 
 (* Exercise it *)
-
+(*
 let e1 = fromString "5+7"
 let e2 = fromString "let f x = x + 7 in f 2 end"
 
@@ -99,4 +99,4 @@ let ex8 = fromString
 let ex9 = fromString
                 @"let ge2 x = (x = 11)
                     in let sumPow n = if ge2(n) then 0 else n * n * n * n * n * n * n * n + sumPow(n+1)
-                        in sumPow 1 end end"
+                        in sumPow 1 end end"*)

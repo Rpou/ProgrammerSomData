@@ -53,36 +53,27 @@ let rec eval (e : expr) (env : value env) : int =
       if b<>0 then eval e2 env
       else eval e3 env
     | Letfun(f, xlist, fBody, letBody) -> 
-      (*let rec helper lst accEnv = 
-        match lst with
-        | [] -> accEnv
-        | x :: xs -> (f, Closure(f, x, fBody, accEnv)) :: accEnv *)
+      (* adds the function with many arguments to the env recursiv*)
+      let rec fEnv : value env = (f, Closure(f, xlist, fBody, fEnv)) :: env
+      eval letBody fEnv
 
-      let bodyEnv = (f, Closure(f, xlist, fBody, env)) :: env
-      eval letBody bodyEnv
     | Call(Var f, eArglist) -> 
       let fClosure = lookup env f
       match fClosure with
         | Closure (f, xlist, fBody, fDeclEnv) ->
+          let startEnv = (f, fClosure) :: fDeclEnv
+
           let rec helper arglist xlst accEnv = 
             match arglist, xlst with 
             | [],[] -> accEnv
             | x :: xs, y :: ys ->
                 let xVal = Int(eval x env)
-                helper xs ys ((y, xVal) :: (f, fClosure) :: fDeclEnv)
-            | _ -> failwith "you did NOT cook"
+                helper xs ys ((y, xVal) :: accEnv)
+            | _ -> failwith "Wrong amount of args vs strings"
 
-          let finalBody = helper eArglist xlist env
+          let finalBody = helper eArglist xlist startEnv
           eval fBody finalBody
         | _ -> failwith "eval Call: not a function"
-    (*| Call(Var f, eArg) -> 
-      let fClosure = lookup env f
-      match fClosure with
-      | Closure (f, x, fBody, fDeclEnv) ->
-        let xVal = Int(eval eArg env)
-        let fBodyEnv = (x, xVal) :: (f, fClosure) :: fDeclEnv
-        eval fBody fBodyEnv
-      | _ -> failwith "eval Call: not a function"*)
     | Call _ -> failwith "eval Call: not first-order function"
 
 (* Evaluate in empty environment: program must have no free variables: *)
