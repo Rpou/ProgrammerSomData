@@ -185,6 +185,8 @@ How many states: 3
 
 ## Q3
 
+<img width="278" height="141" alt="image" src="https://github.com/user-attachments/assets/1a065209-2015-49d2-bb53-340a8c94081f" />
+
 
 
 ## Q4
