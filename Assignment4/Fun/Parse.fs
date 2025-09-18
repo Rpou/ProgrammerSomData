@@ -36,6 +36,14 @@ let fromFile (filename : string) =
 let e1 = fromString "5+7"
 let e2 = fromString "let f x = x + 7 in f 2 end"
 
+let sum n =
+    let rec helper x acc = 
+      match x with
+      | 0 -> acc
+      | _ -> sum (x-1) (acc+x)
+    helper n 0
+let e3 = sum 1000
+
 (* Examples in concrete syntax *)
 
 let ex1 = fromString 
