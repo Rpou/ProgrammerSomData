@@ -1,4 +1,4 @@
-## f# implementation af mergesort på 2 int lister
+## f# implementation af mergesort på 2 sorterede int lister
 
     let rec merge (list1: int list) (list2: int list) : int list =
         match list1, list2 with
@@ -7,7 +7,7 @@
         | x :: xs, y :: ys -> if x > y then y :: merge list1 ys
                               else x :: merge xs list2
 
-## Java implementation af mergesort på 2 arr
+## Java implementation af mergesort på 2 sorterede arr
 
     public static int[] merge(int[] list1, int[] list2){
         int x = 0;
