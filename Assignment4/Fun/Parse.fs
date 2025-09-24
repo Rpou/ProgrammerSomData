@@ -70,6 +70,8 @@ let ex5 = fromString
                  in fib 25 
                  end
               end"
+
+// OUR CODE
 let ex6 = fromString
             @"let ge2 x = (x = 0)
               in let sum n = if ge2(n) then n else n + sum (n-1)
