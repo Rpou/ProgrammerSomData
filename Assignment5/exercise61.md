@@ -1,5 +1,7 @@
 
 <img width="781" height="164" alt="image" src="https://github.com/user-attachments/assets/118dd773-6d00-45a2-9d11-cda265cffb87" />
+<img width="347" height="52" alt="image" src="https://github.com/user-attachments/assets/0f5b3948-3c1b-4418-8d8d-16d2a9752541" />
+
 
 The last one returns a closure. This is because y is undefined and we therefore need this to able to return an int. We instead get the closure of the last func.
 
