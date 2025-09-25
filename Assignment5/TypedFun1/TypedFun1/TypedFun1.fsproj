@@ -8,6 +8,22 @@
     <ItemGroup>
         <Compile Include="Program.fs"/>
         <Compile Include="TypedFun.fs" />
+        <Compile Include="Absyn.fs" />
+        <None Include="chap5.fsx" />
+        <Compile Include="Fun.fs" />
+        <Compile Include="Parse.fs" />
+        <None Include="chap6.fsx" />
+        <Compile Include="FunLex.fs" />
+        <Compile Include="FunPar.fs" />
+        <Compile Include="FunLex.fsi" />
+        <Content Include="FunLex.fsl" />
+        <Compile Include="FunPar.fsi" />
+        <Content Include="FunPar.fsy" />
+        <Compile Include="HigherFun.fs" />
+        <Compile Include="ParseAndRun.fs" />
+        <Content Include="LinkedList.java" />
+        <Compile Include="ParseAndType.fs" />
+        <Compile Include="ParseAndRunHigher.fs" />
     </ItemGroup>
 
 </Project>
