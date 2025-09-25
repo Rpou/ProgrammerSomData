@@ -96,6 +96,7 @@ let rec eval (e : tyexpr) (env : value env) : int =
         eval fBody fBodyEnv
       | _ -> failwith "eval Call: not a function"
     | Call _ -> failwith "illegal function in Call"
+    | ListExpr(x,y) -> failwith "not meant to eval lists"
 
 (* Type checking for the first-order functional language: *)
 
@@ -142,9 +143,18 @@ let rec typ (e : tyexpr) (env : typ env) : typ =
     | Call(_, eArg) -> failwith "Call: illegal function in call"
     | ListExpr(tl, t) -> 
       match tl with
-      | [] -> typL
-      | x :: xs -> if typ t [] = typ x [] then typ ListExpr(xs,t) []
-                    else failwith "NOT ALL LIST ELEMENTS OF SAME TYPE"
+      | [] -> TypL t
+      | x :: y :: xs -> if typ x [] = typ y [] then typ (ListExpr(y :: xs,t)) []
+                         else failwith "NOT ALL LIST ELEMENTS OF SAME TYPE"
+      | x :: xs -> let a = typ x []
+                   match t with
+                   | TypI when a = TypI -> TypL t
+                   | TypB when a = TypB -> TypL t
+                   | TypF(x,y) when a = TypF(x,y) -> TypL t
+                   | TypL(x) when a = TypL(x) -> TypL t
+                   | _ -> failwith "LIST TYPE NOT MATCH WITH ELEMENTS"
+
+              
 
 
 let typeCheck e = typ e [];;
@@ -194,3 +204,18 @@ let exErr3 = Letfun("f", "x", TypB, Call(Var "f", CstI 22), TypI,
 
 let exErr4 = Letfun("f", "x", TypB, If(Var "x", CstI 11, CstI 22), TypB,
                     Call(Var "f", CstB true));;
+// OK: [1;2;3] : int list
+let exList1 = ListExpr([CstI 1; CstI 2; CstI 3], TypI)
+let _ = typeCheck exList1  // TypL TypI
+
+// OK: [] : bool list
+let exList2 = ListExpr([], TypB)
+let _ = typeCheck exList2  // TypL TypB
+
+// Type error: mixed element types
+let exListErr1 = ListExpr([CstI 1; CstB true; CstB true], TypI)
+let _ = typeCheck exListErr1  // should throw
+
+// Type error: annotation does not match elements
+let exListErr2 = ListExpr([CstI 1; CstI 2], TypB)
+let _ = typeCheck exListErr2  // should throw
