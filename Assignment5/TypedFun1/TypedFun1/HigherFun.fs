@@ -30,6 +30,7 @@ let rec lookup env x =
 type value = 
   | Int of int
   | Closure of string * string * expr * value env       (* (f, x, fBody, fDeclEnv) *)
+  | Clos of string * expr * value env
 
 let rec eval (e : expr) (env : value env) : value =
     match e with
@@ -55,6 +56,9 @@ let rec eval (e : expr) (env : value env) : value =
       | Int 0 -> eval e3 env
       | Int _ -> eval e2 env
       | _     -> failwith "eval If"
+    | Fun (str, e) -> 
+      let newEnv = (str, Clos(str, e, env)) :: env
+      eval e newEnv
     | Letfun(f, x, fBody, letBody) -> 
       let bodyEnv = (f, Closure(f, x, fBody, env)) :: env
       eval letBody bodyEnv

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dugGBrLpxeU=",
+  "dgSpecHash": "7+wtYhrMWMs=",
   "success": true,
-  "projectFilePath": "C:\\ITU\\5.semester\\ProgrammerSomData\\Assignment5\\TypedFun1\\TypedFun1\\TypedFun1.fsproj",
+  "projectFilePath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment5/TypedFun1/TypedFun1/TypedFun1.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ander\\.nuget\\packages\\fsharp.core\\9.0.202\\fsharp.core.9.0.202.nupkg.sha512"
+    "/home/rasmus/.nuget/packages/fsharp.core/9.0.300/fsharp.core.9.0.300.nupkg.sha512"
   ],
   "logs": []
 }
