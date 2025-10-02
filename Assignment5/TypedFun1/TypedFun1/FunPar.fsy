@@ -13,13 +13,13 @@
 
 %token ELSE END FALSE IF IN LET NOT THEN TRUE FUN
 %token PLUS MINUS TIMES DIV MOD
-%token EQ NE GT LT GE LE
+%token EQ NE GT LT GE LE ARROW
 %token LPAR RPAR 
 %token EOF
 
 %left ELSE              /* lowest precedence  */
-%left EQ NE 
-%left GT LT GE LE
+%left EQ NE ARROW
+%left GT LT GE LE 
 %left PLUS MINUS
 %left TIMES DIV MOD 
 %nonassoc NOT           /* highest precedence  */
@@ -56,7 +56,7 @@ AtExpr:
     Const                               { $1                     }
   | NAME                                { Var $1                 }
   | LET NAME EQ Expr IN Expr END        { Let($2, $4, $6)        }
-  | FUN NAME
+  | FUN NAME ARROW Expr                 { Fun($2, $4)            }
   | LET NAME NAME EQ Expr IN Expr END   { Letfun($2, $3, $5, $7) }
   | LPAR Expr RPAR                      { $2                     }
 ;
