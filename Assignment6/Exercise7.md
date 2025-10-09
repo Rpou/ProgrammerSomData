@@ -10,5 +10,7 @@ Proof of running the program:
 
 # III
 
+The first example has a freq with 4 in size. the next has 2 in size. It messes up the calculations. 
+
 <img width="828" height="440" alt="image" src="https://github.com/user-attachments/assets/c9a81100-182c-4d84-bd99-2edf466649e2" />
 
