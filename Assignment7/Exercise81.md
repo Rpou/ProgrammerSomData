@@ -9,3 +9,8 @@ Proof of running the program:
 <img width="1012" height="219" alt="image" src="https://github.com/user-attachments/assets/defd11dd-4255-48fe-bd67-700582c59138" />
 
 <img width="831" height="147" alt="image" src="https://github.com/user-attachments/assets/2d7eaee3-6e3b-4f94-b722-bc9f498527d4" />
+
+## Exercise 8.4
+
+<img width="820" height="200" alt="image" src="https://github.com/user-attachments/assets/e6954ee9-65d1-4d0b-a409-9030413fb2b3" />
+
