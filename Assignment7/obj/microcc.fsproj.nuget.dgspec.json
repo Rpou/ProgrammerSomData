@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment6/microcc.fsproj": {}
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/microcc.fsproj": {}
   },
   "projects": {
-    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment6/microcc.fsproj": {
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/microcc.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment6/microcc.fsproj",
+        "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/microcc.fsproj",
         "projectName": "microcc",
-        "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment6/microcc.fsproj",
+        "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/microcc.fsproj",
         "packagesPath": "/home/rasmus/.nuget/packages/",
-        "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment6/obj/",
+        "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/rasmus/.nuget/NuGet/NuGet.Config"
