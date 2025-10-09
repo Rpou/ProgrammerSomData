@@ -10,6 +10,13 @@ Proof of running the program:
 
 <img width="831" height="147" alt="image" src="https://github.com/user-attachments/assets/2d7eaee3-6e3b-4f94-b722-bc9f498527d4" />
 
+## Exercise 8.3
+
+There is also a file "exercise83.c".
+
+<img width="396" height="70" alt="image" src="https://github.com/user-attachments/assets/4609db77-a3ca-4f07-a7fd-eaf53466f395" />
+
+
 ## Exercise 8.4
 
 <img width="820" height="200" alt="image" src="https://github.com/user-attachments/assets/e6954ee9-65d1-4d0b-a409-9030413fb2b3" />
