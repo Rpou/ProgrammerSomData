@@ -19,7 +19,7 @@ There is also a file "exercise83.c".
 
 ## Exercise 8.4
 
-The reason for a difference in run time is that prog1 is easily convertable to Assemble. Where ex8 needs to be translated further in the fsharp code and the logic has to be formed.
+The reason for a difference in run time is that prog1 is easily convertable to Assemble. Where ex8 needs to be translated further in the fsharp code and the logic has to be formed. The code itself is also significantly slower as seen below. prog1 is only the core functionality, where as ex8 needs more formalities around this core and is therefor a lot slower. 
 
 <img width="820" height="200" alt="image" src="https://github.com/user-attachments/assets/e6954ee9-65d1-4d0b-a409-9030413fb2b3" />
 
