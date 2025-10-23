@@ -215,6 +215,7 @@ and eval e locEnv gloEnv store : int * store =
         let currentVal = getSto store1 location
         let newVal = currentVal - 1
         (newVal, setSto store1 location newVal)
+// Can also do normally
     | Cond (e1, e2, e3) ->
         let (i1, store1) = eval e1 locEnv gloEnv store
         if i1<>0 then eval e2 locEnv gloEnv store1 else eval e3 locEnv gloEnv store1
