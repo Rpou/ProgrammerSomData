@@ -133,6 +133,17 @@ let rec exec stmt (locEnv : locEnv) (gloEnv : gloEnv) (store : store) : store =
               if v<>0 then loop (exec body locEnv gloEnv store2)
                       else store2
       loop store
+    | Switch (e, cases) ->
+        let baseexpr = eval e locEnv gloEnv store
+        let rec helper lst =
+            match lst with
+            | [] -> store
+            | x :: xs ->
+                let (ex, st) = x
+                let caseExpr = eval ex locEnv gloEnv store
+                if (caseExpr = baseexpr) then exec st locEnv gloEnv store else helper xs
+                
+        helper cases
     | Expr e -> 
       let (_, store1) = eval e locEnv gloEnv store 
       store1 
