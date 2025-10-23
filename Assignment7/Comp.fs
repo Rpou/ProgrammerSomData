@@ -227,9 +227,9 @@ and cExpr (e : expr) (varEnv : varEnv) (funEnv : funEnv) : instr list =
       @ cExpr e2 varEnv funEnv
       @ [GOTO labend; Label labtrue; CSTI 1; Label labend]
     | PreInc(e1) ->
-        cAccess e1 varEnv funEnv @ [PRINTI] @ [CSTI 10] @ [SUB]
+        cAccess e1 varEnv funEnv @ [DUP] @ [LDI] @ [CSTI 1] @ [ADD] @ [STI]
     | PreDec(e1) ->
-        cAccess e1 varEnv funEnv @ [CSTI 11] @ [SUB]
+        cAccess e1 varEnv funEnv @ [DUP] @ [LDI] @ [CSTI 1] @ [SUB] @ [STI]
 //NEW COND
     | Cond(e1, e2, e3) -> 
       let labtwo = newLabel()
