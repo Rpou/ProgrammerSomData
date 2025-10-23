@@ -146,37 +146,20 @@ let rec cStmt stmt (varEnv : varEnv) (funEnv : funEnv) : instr list =
       cExpr e1 varEnv funEnv
       let rec loop cases =
         match cases with 
-        | [] -> @[GOTO labend]
+        | [] -> @ [GOTO labend]
         | x :: xs -> 
             let (ex, st) = x
-            @cExpr ex varEnv funEnv
-            @EQ [IFZERO labskip]
-            @cStmt st varEnv funEnv
-            [Label labskip]
+            cExpr ex varEnv funEnv
+            @ EQ [IFZERO labskip]
+            @ cStmt st varEnv funEnv
+            @ [GOTO labend]
+            @ [Label labskip]
+            @ INCSP -1
             loop xs 
 
-            
-            
-            
-
+      let f = loop lst
+      @ f
       @ [Label labend] 
-
-      
-    
-
-
-
-
-let baseexpr = eval e locEnv gloEnv store
-        let rec helper lst =
-            match lst with
-            | [] -> store
-            | x :: xs ->
-                let (ex, st) = x
-                let caseExpr = eval ex locEnv gloEnv store
-                if (caseExpr = baseexpr) then exec st locEnv gloEnv store else helper xs
-                
-        helper cases
     | Return None -> 
       [RET (snd varEnv - 1)]
     | Return (Some e) -> 
