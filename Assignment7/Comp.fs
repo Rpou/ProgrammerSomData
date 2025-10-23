@@ -141,24 +141,25 @@ let rec cStmt stmt (varEnv : varEnv) (funEnv : funEnv) : instr list =
       let (fdepthend, code) = loop stmts varEnv
       code @ [INCSP(snd varEnv - fdepthend)]  (* Remove variables, declared in the block, from the stack *)
     | Switch (e1, lst) ->
-      let labskip = newLabel()
       let labend  = newLabel()
-      cExpr e1 varEnv funEnv
-      let rec loop cases =
+      
+      let expreval = cExpr e1 varEnv funEnv //month
+      let rec loop cases : instr list =
         match cases with 
-        | [] -> @ [GOTO labend]
-        | x :: xs -> 
+        | [] -> [GOTO labend]
+        | x :: xs ->
+            let labskip = newLabel()
             let (ex, st) = x
-            cExpr ex varEnv funEnv
-            @ EQ [IFZERO labskip]
+            [DUP]
+            @ cExpr ex varEnv funEnv //day
+            @ [EQ] @ [IFZERO labskip]
+            @ [INCSP -1]
             @ cStmt st varEnv funEnv
             @ [GOTO labend]
             @ [Label labskip]
-            @ INCSP -1
-            loop xs 
+            @ loop xs  
 
-      let f = loop lst
-      @ f
+      expreval @ loop lst
       @ [Label labend] 
     | Return None -> 
       [RET (snd varEnv - 1)]

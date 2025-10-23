@@ -15,6 +15,7 @@
     <Compile Include="Contcomp.fs" />
     <Compile Include="MicroCC.fs" />    
     <Compile Include="Interp.fs" />    
+    <Compile Include="Comp.fs" />    
   </ItemGroup>
 
   <ItemGroup>
