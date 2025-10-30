@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("microcc")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12a4433d7a1faa81dc0369c364d759296fd375d1")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb2addee106478d3377bbb8fb1f022e8519a2ad7")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("microcc")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("microcc")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
