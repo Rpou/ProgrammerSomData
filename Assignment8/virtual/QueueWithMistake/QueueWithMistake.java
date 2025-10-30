@@ -101,6 +101,11 @@ class SentinelLockQueue implements Queue {
       return -999;
     Node first = head;
     head = first.next;
+    first.next = null;
+    /*A queue should only have 6-7 nodes at all times.
+    However since the first element's reference to the next element is not set to null,
+    the reference still exists and it's not removed by java's automatic garbage collection.
+    Line 104, first.next=null, fixes this issue */
     return head.item;
   }
 }
