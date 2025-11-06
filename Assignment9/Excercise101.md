@@ -7,3 +7,13 @@
 5. It pops the two previous values on the stack and creates a reference to them together on the heap.
 6. CAR uses a pointer as created by CONS. It the returns the first value of the pair created from CONS.
 7. SETCAR does the same as CAR, but instead of returning it updates the value. The pointer and new values comes before it on the stack.
+
+Applying LENGTH returns the n's, COLOR returns the g's. PAINT is responsible for changing gg into one of the colors(states).
+
+Allocate is used to allocate whenever a variable is declared and needs memory.
+
+When memory is full it will use the collect function when trying to allocate.
+
+
+
+
