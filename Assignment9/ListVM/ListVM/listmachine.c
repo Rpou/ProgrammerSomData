@@ -470,9 +470,45 @@ void initheap() {
   freelist = &heap[0];
 }
 
+void mark(word *block, int i){
+	if(Length(block[0]) == 0){
+		block[0] = Paint(block[0], Blue);
+		return;
+	}
+	if(i == Length(block[0])){
+	       	block[0] = Paint(block[0], Black);
+		return;
+	}
+	printf(block[i]);
+
+//	if(block[i+1][0] == 0 && block[i+1][1] == 0){
+//		mark(&block[i+1][0]);
+//		mark(&block[i+1][1]);
+//	}
+	mark(&block[i+1], i++);
+}
+
 void markPhase(word s[], word sp) {
+	printf("suck my ass\n");
   printf("marking ...\n");
-  // TODO: Actually mark something
+  printf(&sp);
+  int i = 0;
+	printf("suck my penis\n");
+  while(s[i] != sp){
+	printf("suck my co\n");
+	printf(&s);
+	printf("suck my co\n");
+	if(s[i] == NIL){
+		printf("suck my balls\n");
+	       i++;
+	       continue;
+	}
+	printf(s[i]);
+	mark(s[i], 0);
+	i++;
+	printf(s[i]);
+  }
+
 }
 
 void sweepPhase() {
@@ -481,6 +517,7 @@ void sweepPhase() {
 }
 
 void collect(word s[], word sp) {
+  heapStatistics();
   markPhase(s, sp);
   heapStatistics();
   sweepPhase();
