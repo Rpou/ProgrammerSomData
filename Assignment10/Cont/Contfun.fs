@@ -195,6 +195,23 @@ let eval2 e env =
 
 let run2 e = eval2 e []
 
+let rec len xs =
+  match xs with
+  | [] -> 0
+  | x::xr -> 1 + len xr;;
+
+let rec lenc (a: 'a list) (c: int -> 'a) =
+  match a with
+  | [] -> c 0
+  | x::xs -> lenc xs (fun x -> c (x+1))
+  
+let rec leni (a: 'a list) acc =
+  match a with
+  | [] -> acc
+  | x::xs -> leni xs (acc+1)
+  
+
+
 (* Examples in abstract syntax *)
 
 let ex1 = Letfun("f1", "x", Prim("+", Var "x", CstI 1), 
