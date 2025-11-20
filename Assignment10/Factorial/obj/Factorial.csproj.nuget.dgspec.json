@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\microcc.fsproj": {}
+    "C:\\ITU\\5.semester\\ProgrammerSomData\\Assignment10\\Factorial\\Factorial.csproj": {}
   },
   "projects": {
-    "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\microcc.fsproj": {
+    "C:\\ITU\\5.semester\\ProgrammerSomData\\Assignment10\\Factorial\\Factorial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\microcc.fsproj",
-        "projectName": "microcc",
-        "projectPath": "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\microcc.fsproj",
+        "projectUniqueName": "C:\\ITU\\5.semester\\ProgrammerSomData\\Assignment10\\Factorial\\Factorial.csproj",
+        "projectName": "Factorial",
+        "projectPath": "C:\\ITU\\5.semester\\ProgrammerSomData\\Assignment10\\Factorial\\Factorial.csproj",
         "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\obj\\",
+        "outputPath": "C:\\ITU\\5.semester\\ProgrammerSomData\\Assignment10\\Factorial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,7 +20,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\9.0.205\\FSharp\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -28,6 +27,11 @@
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
@@ -39,14 +43,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "FSharp.Core": {
-              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
-              "target": "Package",
-              "version": "[9.0.202, )",
-              "generatePathProperty": true
-            }
-          },
           "imports": [
             "net461",
             "net462",
