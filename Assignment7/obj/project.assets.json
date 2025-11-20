@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "FSharp.Core/9.0.300": {
+      "FSharp.Core/9.0.202": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -59,15 +59,15 @@
     }
   },
   "libraries": {
-    "FSharp.Core/9.0.300": {
-      "sha512": "2ZDoF/N7WPidmaflrTnPucUJfaV5XkIHCh4h77yET7ihuv2dR2ksSsIiiDd34Z9YmwyYEQocpDl1r6RXFr0DMg==",
+    "FSharp.Core/9.0.202": {
+      "sha512": "p8iGT2PeRL9q0ZIQ3ZhmRMRs4+b5Xaf9SSYKOt/+tDtznMQhHovYWaD1491RvBz8rnxcesAISbrkrjI1/4TUtw==",
       "type": "package",
-      "path": "fsharp.core/9.0.300",
+      "path": "fsharp.core/9.0.202",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "fsharp.core.9.0.300.nupkg.sha512",
+        "fsharp.core.9.0.202.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -104,29 +104,29 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FSharp.Core >= 9.0.300"
+      "FSharp.Core >= 9.0.202"
     ]
   },
   "packageFolders": {
-    "/home/rasmus/.nuget/packages/": {}
+    "C:\\Users\\ander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/microcc.fsproj",
+      "projectUniqueName": "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\microcc.fsproj",
       "projectName": "microcc",
-      "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/microcc.fsproj",
-      "packagesPath": "/home/rasmus/.nuget/packages/",
-      "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment7/obj/",
+      "projectPath": "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\microcc.fsproj",
+      "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+      "outputPath": "c:\\ITU\\5.semester\\ProgrammerSomData\\Assignment7\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/rasmus/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/home/rasmus/.dotnet/sdk/9.0.303/FSharp/library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\9.0.205\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -140,7 +140,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -149,7 +149,7 @@
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[9.0.300, )",
+            "version": "[9.0.202, )",
             "generatePathProperty": true
           }
         },
@@ -167,15 +167,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.18, 8.0.18]"
+            "version": "[8.0.17, 8.0.17]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.18, 8.0.18]"
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.17, 8.0.17]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.18, 8.0.18]"
+            "version": "[8.0.17, 8.0.17]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.17, 8.0.17]"
           }
         ],
         "frameworkReferences": {
@@ -183,7 +187,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/rasmus/.dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

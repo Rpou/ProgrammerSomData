@@ -34,6 +34,8 @@ type expr =
   | And of expr * expr
   | Or  of expr * expr
   | Seq of expr * expr
+  | Prim1 of string * expr
+  | Even of expr
   | Every of expr 
   | Fail;;
 
@@ -98,6 +100,12 @@ let rec eval (e : expr) (cont : cont) (econt : econt) =
     | Every e -> 
       eval e (fun _ -> fun econt1 -> econt1 ())
              (fun () -> cont (Int 0) econt)
+    | Prim1(str, e1) ->
+            eval e1 (fun v1 -> fun econt1 ->
+              match (str,v1) with
+              | ("sqr", Int i1) -> cont (Int(i1*i1)) econt1
+              | ("even", Int i1) -> if i1 % 2 = 0 then cont (Int i1) econt1
+                                      else econt1 ()) econt
     | Fail -> econt ()
 
 let run e = eval e (fun v -> fun _ -> v) (fun () -> (printfn "Failed"; Int 0));
