@@ -105,7 +105,12 @@ let rec eval (e : expr) (cont : cont) (econt : econt) =
               match (str,v1) with
               | ("sqr", Int i1) -> cont (Int(i1*i1)) econt1
               | ("even", Int i1) -> if i1 % 2 = 0 then cont (Int i1) econt1
-                                      else econt1 ()) econt
+                                      else econt1 ()
+              | ("multiples", Int i1) -> let rec helper c =
+                                          cont (Int (i1 * c))
+                                              (fun () -> helper (c + 1))
+                                          helper 1    
+      ) econt
     | Fail -> econt ()
 
 let run e = eval e (fun v -> fun _ -> v) (fun () -> (printfn "Failed"; Int 0));
