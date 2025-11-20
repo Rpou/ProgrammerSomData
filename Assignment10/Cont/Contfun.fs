@@ -210,6 +210,20 @@ let rec leni (a: 'a list) acc =
   | [] -> acc
   | x::xs -> leni xs (acc+1)
   
+let rec rev xs =
+  match xs with
+    | [] -> []
+    | x::xr -> rev xr @ [x];;
+
+let rec revc (list: 'a list) (c: 'a list -> 'a list) =
+  match list with
+    | [] -> c []
+    | x::xs -> revc xs (fun a -> c(a @ [x]))
+
+let rec revi (list: 'a list) acc = 
+  match list with
+    | [] -> acc
+    | x::xs -> revi xs (x::acc)
 
 
 (* Examples in abstract syntax *)
