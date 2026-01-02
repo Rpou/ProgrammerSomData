@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="TypedFun1">
+    <resource name="FSharpSignatureData.TypedFun1" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.TypedFun1" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.TypedFun1" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.TypedFun1" action="remove"></resource>
+    <resource name="FSharpOptimizationData.TypedFun1" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.TypedFun1" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.TypedFun1" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.TypedFun1" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.TypedFun1" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.TypedFun1" action="remove"></resource>
+  </assembly>
+</linker>

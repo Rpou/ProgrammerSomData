@@ -28,3 +28,11 @@
 /Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/obj/Debug/net8.0/microsmlc.pdb
 /Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/obj/Debug/net8.0/microsmlc.genruntimeconfig.cache
 /Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/obj/Debug/net8.0/ref/microsmlc.dll
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.fsproj.AssemblyReference.cache
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.AssemblyInfoInputs.cache
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.AssemblyInfo.fs
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.fsproj.CoreCompileInputs.cache
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.sourcelink.json
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.dll
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/refint/microsmlc.dll
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/Debug/net8.0/microsmlc.pdb

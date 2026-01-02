@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("listc")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8afbebbef116cb520ec6d3a064b8e789984919b9")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("listc")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("listc")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

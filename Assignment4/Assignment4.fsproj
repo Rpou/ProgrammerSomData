@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- TypedFun -->
+        <Compile Include="TypedFun/Absyn.fs" />
+        <Compile Include="TypedFun/Types.fs" />
+        <Compile Include="TypedFun/TypeChecker.fs" />
+        <Compile Include="TypedFun/Interpreter.fs" />
+        <Content Include="TypedFun\README.TXT" />
+        <Compile Include="TypedFun\TypedFun.fs" />
+        <Compile Include="SExpr\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+        <Content Include="SExpr\obj\Debug\net8.0\sexpr.assets.cache" />
+        <Compile Include="SExpr\obj\Debug\net8.0\sexpr.GlobalUsings.g.cs" />
+        <Content Include="SExpr\obj\Debug\net8.0\sexpr.AssemblyInfoInputs.cache" />
+        <Content Include="SExpr\obj\Debug\net8.0\sexpr.GeneratedMSBuildEditorConfig.editorconfig" />
+        <Compile Include="SExpr\obj\Debug\net8.0\sexpr.AssemblyInfo.cs" />
+        <Content Include="SExpr\obj\project.nuget.cache" />
+        <Content Include="SExpr\obj\sexpr.csproj.nuget.g.props" />
+        <Content Include="SExpr\obj\sexpr.csproj.nuget.g.targets" />
+        <Content Include="SExpr\obj\project.assets.json" />
+        <Content Include="SExpr\obj\rider.project.restore.info" />
+        <Content Include="SExpr\obj\sexpr.csproj.nuget.dgspec.json" />
+        <Content Include="SExpr\obj\project.packagespec.json" />
+        <Content Include="SExpr\README.TXT" />
+        <Content Include="SExpr\sexpr.csproj" />
+        <Compile Include="SExpr\sexpr.cs" />
+        <Content Include="obj\project.nuget.cache" />
+        <Content Include="obj\rider.project.model.nuget.info" />
+        <Content Include="obj\Assignment4.fsproj.nuget.dgspec.json" />
+        <Content Include="obj\Assignment4.fsproj.nuget.g.props" />
+        <Content Include="obj\Assignment4.fsproj.nuget.g.targets" />
+        <Content Include="obj\project.assets.json" />
+        <Content Include="obj\rider.project.restore.info" />
+        <Content Include="obj\project.packagespec.json" />
+        <Content Include="Fun\.idea\encodings.xml" />
+        <Content Include="Fun\.idea\indexLayout.xml" />
+        <Content Include="Fun\.idea\workspace.xml" />
+        <Content Include="Fun\.idea\projectSettingsUpdater.xml" />
+        <Content Include="Fun\.idea\.gitignore" />
+        <Content Include="Fun\.idea\vcs.xml" />
+        <Compile Include="Fun\Absyn.fs" />
+        <Compile Include="Fun\FunPar.fsi" />
+        <Compile Include="Fun\FunLex.fsi" />
+        <Compile Include="Fun\Parse.fs" />
+        <Compile Include="Fun\ParseAndRun.fs" />
+        <Content Include="Fun\README.TXT" />
+        <Compile Include="Fun\Fun.fs" />
+        <Content Include="Fun\FunLex.fsl" />
+        <Content Include="Fun\grammar.txt" />
+        <Content Include="Fun\FunPar.fsy" />
+        <Compile Include="Fun\Util.fs" />
+        <Compile Include="Fun\FunLex.fs" />
+        <Compile Include="Fun\FunPar.fs" />
+        <Content Include="Exercise41.md" />
+    </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,5 @@
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment3/Expr/obj/Debug/net8.0/Exercises.fsproj.AssemblyReference.cache
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment3/Expr/obj/Debug/net8.0/Exercises.AssemblyInfoInputs.cache
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment3/Expr/obj/Debug/net8.0/Exercises.AssemblyInfo.fs
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment3/Expr/obj/Debug/net8.0/Exercises.fsproj.CoreCompileInputs.cache
+/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment3/Expr/obj/Debug/net8.0/Exercises.sourcelink.json

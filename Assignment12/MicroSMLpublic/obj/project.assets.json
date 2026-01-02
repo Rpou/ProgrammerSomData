@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "FSharp.Core/8.0.200": {
+      "FSharp.Core/8.0.102": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -59,15 +59,14 @@
     }
   },
   "libraries": {
-    "FSharp.Core/8.0.200": {
-      "sha512": "qnxoF3Fu0HzfOeYdrwmQOsLP1v+OtOMSIYkNVUwf6nGqWzL03Hh4r6VFCvCb54jlsgtt3WADVYkKkrgdeY5kiQ==",
+    "FSharp.Core/8.0.102": {
+      "sha512": "eUKRDzgiAQAvPUmVmFTkHYRGPSxIRKcvsaJX+tglMohW7qez15Wc1QhCixJWlY15c9knQFsPnsfTiXRuRjrO2g==",
       "type": "package",
-      "path": "fsharp.core/8.0.200",
+      "path": "fsharp.core/8.0.102",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "Icon.png",
-        "fsharp.core.8.0.200.nupkg.sha512",
+        "fsharp.core.8.0.102.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -104,29 +103,29 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FSharp.Core >= 8.0.200"
+      "FSharp.Core >= 8.0.102"
     ]
   },
   "packageFolders": {
-    "/Users/nh/.nuget/packages/": {}
+    "/home/rasmus/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/microsmlc.fsproj",
+      "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/microsmlc.fsproj",
       "projectName": "microsmlc",
-      "projectPath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/microsmlc.fsproj",
-      "packagesPath": "/Users/nh/.nuget/packages/",
-      "outputPath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/obj/",
+      "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/microsmlc.fsproj",
+      "packagesPath": "/home/rasmus/.nuget/packages/",
+      "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nh/.nuget/NuGet/NuGet.Config"
+        "/home/rasmus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/sdk/8.0.201/FSharp/library-packs": {},
+        "/usr/lib/dotnet/sdk/8.0.121/FSharp/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -134,11 +133,6 @@
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -148,7 +142,7 @@
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[8.0.200, )",
+            "version": "[8.0.102, )",
             "generatePathProperty": true
           }
         },
@@ -168,7 +162,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

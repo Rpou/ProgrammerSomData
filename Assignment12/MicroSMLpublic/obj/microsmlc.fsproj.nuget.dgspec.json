@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/microsmlc.fsproj": {}
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/microsmlc.fsproj": {}
   },
   "projects": {
-    "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/microsmlc.fsproj": {
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/microsmlc.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/microsmlc.fsproj",
+        "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/microsmlc.fsproj",
         "projectName": "microsmlc",
-        "projectPath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/microsmlc.fsproj",
-        "packagesPath": "/Users/nh/.nuget/packages/",
-        "outputPath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec11/MicroSMLpublic/obj/",
+        "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/microsmlc.fsproj",
+        "packagesPath": "/home/rasmus/.nuget/packages/",
+        "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment12/MicroSMLpublic/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nh/.nuget/NuGet/NuGet.Config"
+          "/home/rasmus/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/8.0.201/FSharp/library-packs": {},
+          "/usr/lib/dotnet/sdk/8.0.121/FSharp/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -28,11 +28,6 @@
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -42,7 +37,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[8.0.200, )",
+              "version": "[8.0.102, )",
               "generatePathProperty": true
             }
           },
@@ -62,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

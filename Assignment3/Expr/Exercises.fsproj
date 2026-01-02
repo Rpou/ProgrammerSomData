@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Abstract syntax -->
+        <Compile Include="Absyn.fs" />
+
+        <!-- Lexer -->
+        <Compile Include="ExprLex.fsi" />
+        <Compile Include="ExprLex.fs" />
+
+        <!-- Parser -->
+        <Compile Include="ExprPar.fsi" />
+        <Compile Include="ExprPar.fs" />
+
+        <!-- Core logic -->
+        <Compile Include="Parse.fs" />
+        <Compile Include="Expr.fs" />
+    </ItemGroup>
+
+</Project>
