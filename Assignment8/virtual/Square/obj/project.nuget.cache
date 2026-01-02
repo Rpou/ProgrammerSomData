@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fgjF3gpbovhcm0VKqoJFmlqp6Zf/Q2U8qg0aT20moTZgAxESnJxjUm79iwCm3r/yl1BwmiPxVKabaZKIqqYY8A==",
+  "dgSpecHash": "I7BAW6tJR3w=",
   "success": true,
-  "projectFilePath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec07/virtual/Square/Square.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment8/virtual/Square/Square.csproj",
+  "expectedPackageFiles": [
+    "/home/rasmus/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/rasmus/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/rasmus/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
+  ],
   "logs": []
 }

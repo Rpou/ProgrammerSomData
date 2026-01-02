@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec07/virtual/Ex13/Ex13.csproj": {}
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment8/virtual/Ex13/Ex13.csproj": {}
   },
   "projects": {
-    "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec07/virtual/Ex13/Ex13.csproj": {
+    "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment8/virtual/Ex13/Ex13.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec07/virtual/Ex13/Ex13.csproj",
+        "projectUniqueName": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment8/virtual/Ex13/Ex13.csproj",
         "projectName": "Ex13",
-        "projectPath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec07/virtual/Ex13/Ex13.csproj",
-        "packagesPath": "/Users/nh/.nuget/packages/",
-        "outputPath": "/Users/nh/Library/CloudStorage/Dropbox/Documents/Work/ITU/Course/BPRD-E2024/Lectures/Lec07/virtual/Ex13/obj/",
+        "projectPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment8/virtual/Ex13/Ex13.csproj",
+        "packagesPath": "/home/rasmus/.nuget/packages/",
+        "outputPath": "/home/rasmus/Desktop/Code/ITU/5.semester/ProgrammerSomData/Assignment8/virtual/Ex13/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nh/.nuget/NuGet/NuGet.Config"
+          "/home/rasmus/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -53,12 +54,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/rasmus/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,140 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\cs\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\de\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\es\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\fr\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\FSharp.Core.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\FsLexYacc.Runtime.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\it\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\ja\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\ko\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\microsmlc" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\microsmlc.deps.json" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\microsmlc.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\microsmlc.pdb" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\microsmlc.runtimeconfig.json" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\pl\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\pt-BR\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\ru\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\tr\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\zh-Hans\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\bin\Debug\net8.0\zh-Hant\FSharp.Core.resources.dll" />
+      <Content Include="MicroSMLpublic\ex01.out" />
+      <Content Include="MicroSMLpublic\ex01.sml" />
+      <Content Include="MicroSMLpublic\ex02.out" />
+      <Content Include="MicroSMLpublic\ex02.sml" />
+      <Content Include="MicroSMLpublic\ex03.out" />
+      <Content Include="MicroSMLpublic\ex03.sml" />
+      <Content Include="MicroSMLpublic\ex04.out" />
+      <Content Include="MicroSMLpublic\ex04.sml" />
+      <Content Include="MicroSMLpublic\ex05.out" />
+      <Content Include="MicroSMLpublic\ex05.sml" />
+      <Content Include="MicroSMLpublic\ex06.out" />
+      <Content Include="MicroSMLpublic\ex06.sml" />
+      <Content Include="MicroSMLpublic\ex07.out" />
+      <Content Include="MicroSMLpublic\ex07.sml" />
+      <Content Include="MicroSMLpublic\ex08.out" />
+      <Content Include="MicroSMLpublic\ex08.sml" />
+      <Content Include="MicroSMLpublic\ex09.out" />
+      <Content Include="MicroSMLpublic\ex09.sml" />
+      <Content Include="MicroSMLpublic\ex10.out" />
+      <Content Include="MicroSMLpublic\ex10.sml" />
+      <Content Include="MicroSMLpublic\ex11.out" />
+      <Content Include="MicroSMLpublic\ex11.sml" />
+      <Content Include="MicroSMLpublic\ex12.out" />
+      <Content Include="MicroSMLpublic\ex12.sml" />
+      <Content Include="MicroSMLpublic\exn01.out" />
+      <Content Include="MicroSMLpublic\exn01.sml" />
+      <Content Include="MicroSMLpublic\exn02.out" />
+      <Content Include="MicroSMLpublic\exn02.sml" />
+      <Content Include="MicroSMLpublic\exn03.out" />
+      <Content Include="MicroSMLpublic\exn03.sml" />
+      <Content Include="MicroSMLpublic\exn04.out" />
+      <Content Include="MicroSMLpublic\exn04.sml" />
+      <Content Include="MicroSMLpublic\exn05.sml" />
+      <Content Include="MicroSMLpublic\exn06.out" />
+      <Content Include="MicroSMLpublic\exn06.sml" />
+      <Content Include="MicroSMLpublic\FunLex.fsl" />
+      <Content Include="MicroSMLpublic\FunPar.fsy" />
+      <Content Include="MicroSMLpublic\list.out" />
+      <Content Include="MicroSMLpublic\list.sml" />
+      <Content Include="MicroSMLpublic\microsmlc.fsproj" />
+      <Content Include="MicroSMLpublic\MsmlVM\.idea\.idea.MsmlVM\.idea\.gitignore" />
+      <Content Include="MicroSMLpublic\MsmlVM\.idea\.idea.MsmlVM\.idea\encodings.xml" />
+      <Content Include="MicroSMLpublic\MsmlVM\.idea\.idea.MsmlVM\.idea\indexLayout.xml" />
+      <Content Include="MicroSMLpublic\MsmlVM\.idea\.idea.MsmlVM\.idea\projectSettingsUpdater.xml" />
+      <Content Include="MicroSMLpublic\MsmlVM\.idea\.idea.MsmlVM\.idea\vcs.xml" />
+      <Content Include="MicroSMLpublic\MsmlVM\.idea\.idea.MsmlVM\.idea\workspace.xml" />
+      <Content Include="MicroSMLpublic\MsmlVM\MsmlVM.sln" />
+      <Content Include="MicroSMLpublic\MsmlVM\MsmlVM.vcxproj" />
+      <Content Include="MicroSMLpublic\MsmlVM\MsmlVM.vcxproj.filters" />
+      <Content Include="MicroSMLpublic\MsmlVM\MsmlVM.vcxproj.user" />
+      <Content Include="MicroSMLpublic\MsmlVM\src\msmlmachine" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\apphost" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.AssemblyInfoInputs.cache" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.assets.cache" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.dll" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.fsproj.AssemblyReference.cache" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.fsproj.CoreCompileInputs.cache" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.fsproj.FileListAbsolute.txt" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.fsproj.Up2Date" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.genruntimeconfig.cache" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.pdb" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.sourcelink.json" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\refint\microsmlc.dll" />
+      <Content Include="MicroSMLpublic\obj\Debug\net8.0\ref\microsmlc.dll" />
+      <Content Include="MicroSMLpublic\obj\microsmlc.fsproj.nuget.dgspec.json" />
+      <Content Include="MicroSMLpublic\obj\microsmlc.fsproj.nuget.g.props" />
+      <Content Include="MicroSMLpublic\obj\microsmlc.fsproj.nuget.g.targets" />
+      <Content Include="MicroSMLpublic\obj\project.assets.json" />
+      <Content Include="MicroSMLpublic\obj\project.nuget.cache" />
+      <Content Include="MicroSMLpublic\queens.out" />
+      <Content Include="MicroSMLpublic\queens.sml" />
+      <Content Include="MicroSMLpublic\README.txt" />
+      <Content Include="MicroSMLpublic\test01.out" />
+      <Content Include="MicroSMLpublic\test01.sml" />
+      <Content Include="MicroSMLpublic\test02.out" />
+      <Content Include="MicroSMLpublic\test02.sml" />
+      <Content Include="MicroSMLpublic\testgc.out" />
+      <Content Include="MicroSMLpublic\testgc.sml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="MicroSMLpublic\Absyn.fs" />
+      <Compile Include="MicroSMLpublic\Comp.fs" />
+      <Compile Include="MicroSMLpublic\Contcomp.fs" />
+      <Compile Include="MicroSMLpublic\FunLex.fs" />
+      <Compile Include="MicroSMLpublic\FunLex.fsi" />
+      <Compile Include="MicroSMLpublic\FunPar.fs" />
+      <Compile Include="MicroSMLpublic\FunPar.fsi" />
+      <Compile Include="MicroSMLpublic\HigherFun.fs" />
+      <Compile Include="MicroSMLpublic\Machine.fs" />
+      <Compile Include="MicroSMLpublic\MicroSMLC.fs" />
+      <Compile Include="MicroSMLpublic\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.fs" />
+      <Compile Include="MicroSMLpublic\obj\Debug\net8.0\microsmlc.AssemblyInfo.fs" />
+      <Compile Include="MicroSMLpublic\ParseTypeAndRun.fs" />
+      <Compile Include="MicroSMLpublic\TypeInference.fs" />
+      <Compile Include="MicroSMLpublic\Util.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="MicroSMLpublic\queens.fsx" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ClCompile Include="MicroSMLpublic\MsmlVM\src\msmlmachine.c" />
+      <ClCompile Include="MicroSMLpublic\MsmlVM\src\utils_unix.c" />
+      <ClCompile Include="MicroSMLpublic\MsmlVM\src\utils_win.c" />
+    </ItemGroup>
+
+
+
+</Project>
+
